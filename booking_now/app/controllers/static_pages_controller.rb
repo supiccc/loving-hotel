@@ -84,4 +84,7 @@ class StaticPagesController < ApplicationController
   def searchroom
     @roominfos = RoomInfo.all
   end
+
+  def test
+  end
 end

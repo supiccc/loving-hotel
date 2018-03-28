@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   post '/checkouting', to: 'static_pages#checkouting'
 
   get '/searchroom', to: 'static_pages#searchroom'
+
+  get '/test', to: 'static_pages#test'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'static_pages#home'
 end
