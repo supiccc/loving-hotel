@@ -1,0 +1,169 @@
+<div class="admin-content">
+<div class="admin-content-body">
+<div class="am-cf am-padding am-padding-bottom-0">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">订单详情</strong></div>
+</div>
+<hr>
+
+      <div class="am-g">
+        <div class="am-u-sm-12 am-u-md-3 am-u-md-offset-9">
+          <div class="am-form-group">
+            <select data-am-selected="{btnSize: 'sm'}" id="mySelect">
+              <option value="option1">全部订单</option>
+              <option value="option2">一周以前</option>
+              <option value="option3">未来一周</option>
+              <option value="option4">订单统计</option>
+            </select>
+          </div>
+        </div>      
+      </div>
+
+      <div class="am-g">
+        <div class="am-u-sm-12">
+          <form class="am-form">
+            <table class="am-table am-table-striped am-table-hover table-main" id="tb1">
+    <thead>
+        <tr>
+            <th>订单编号</th>
+            <th>客户名称</th>
+            <th>手机号码</th>
+            <th>入住日期</th>
+            <th>入住房间</th>
+            <th>订单状态</th>
+            <th>订单时间</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @tableinfos.each do |t| %>
+        <tr>
+            <td><%= t.订单编号 %></td>
+            <td><%= t.客户名称 %></td>
+            <td><%= t.手机号码 %></td>
+            <td><%= t.入住日期 %></td>
+            <td><%= t.入住房间 %></td>
+            <td><%= t.订单状态 %></td>      
+            <td><%= t.订单时间 %></td>                  
+        </tr>
+        <% end %>
+    </tbody>
+          </table>
+
+    <table class="am-table am-table-striped am-table-hover table-main" id="tb2" hidden>
+    <thead>
+        <tr>
+            <th>订单编号</th>
+            <th>客户名称</th>
+            <th>手机号码</th>
+            <th>入住日期</th>
+            <th>入住房间</th>
+            <th>订单状态</th>
+            <th>订单时间</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @tablebefores.each do |t| %>
+        <tr>
+            <td><%= t.订单编号 %></td>
+            <td><%= t.客户名称 %></td>
+            <td><%= t.手机号码 %></td>
+            <td><%= t.入住日期 %></td>
+            <td><%= t.入住房间 %></td>
+            <td><%= t.订单状态 %></td>      
+            <td><%= t.订单时间 %></td>                  
+        </tr>
+        <% end %>
+    </tbody>
+          </table>
+
+            <table class="am-table am-table-striped am-table-hover table-main" id="tb3" hidden>
+    <thead>
+        <tr>
+            <th>订单编号</th>
+            <th>客户名称</th>
+            <th>手机号码</th>
+            <th>入住日期</th>
+            <th>入住房间</th>
+            <th>订单状态</th>
+            <th>订单时间</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @tableafters.each do |t| %>
+        <tr>
+            <td><%= t.订单编号 %></td>
+            <td><%= t.客户名称 %></td>
+            <td><%= t.手机号码 %></td>
+            <td><%= t.入住日期 %></td>
+            <td><%= t.入住房间 %></td>
+            <td><%= t.订单状态 %></td>      
+            <td><%= t.订单时间 %></td>                  
+        </tr>
+        <% end %>
+    </tbody>
+          </table>     
+          
+            <table class="am-table am-table-striped am-table-hover table-main" id="tb4" hidden>
+    <thead>
+        <tr>
+            <th>订单编号</th>
+            <th>入住日期</th>
+            <th>入住房间</th>
+            <th>房型</th>
+            <th>价格</th>            
+            <th>订单状态</th>
+            <th>支付方式</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @tablecounts.each do |t| %>
+        <tr>
+            <td><%= t.订单编号 %></td>
+            <td><%= t.入住时间 %></td>
+            <td><%= t.入住房间 %></td>
+            <td><%= t.房型 %></td>            
+            <td><%= t.价格 %></td>            
+            <td><%= t.订单状态 %></td>        
+            <td><%= t.支付方式 %></td>                         
+        </tr>
+        <% end %>
+    </tbody>
+          </table>   
+
+</form>
+</div>
+</div>
+
+
+</div>
+</div>
+
+<script>
+$(document).ready(function(){  
+  $('#mySelect').change(function(){  
+    var p1=$('#mySelect').val(); //这就是selected的值  
+    console.log("%s", p1);
+    if(p1 == "option1") {
+      $('#tb1').show();
+      $('#tb2').hide();
+      $('#tb3').hide();
+      $('#tb4').hide();
+
+    } else if (p1 == "option2") {
+      $('#tb1').hide();
+      $('#tb2').show();
+      $('#tb3').hide();
+      $('#tb4').hide();   
+    } else if (p1 == "option3") {
+      $('#tb1').hide();
+      $('#tb2').hide();
+      $('#tb3').show();
+      $('#tb4').hide();        
+    }  else if (p1 == "option4") {
+      $('#tb1').hide();
+      $('#tb2').hide();
+      $('#tb3').hide();
+      $('#tb4').show();    
+    } 
+  })  
+})  
+</script>

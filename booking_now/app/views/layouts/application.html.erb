@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>他姥姥家的大酒店预定系统</title>
+    <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css"/>
+
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+    <header class="am-topbar am-topbar-inverse admin-header">
+      <div class="am-topbar-brand">
+        <strong>广州四季酒店</strong> <small>订单管理系统</small>
+      </div>
+  </header>
+
+  <div class="am-cf admin-main">
+  <!-- sidebar start -->
+  <div class="admin-sidebar am-offcanvas" id="admin-offcanvas">
+    <div class="am-offcanvas-bar admin-offcanvas-bar">
+      <ul class="am-list admin-sidebar-list">
+        <li><a href="/"><span class="am-icon-home"></span> 首页</a></li>
+        <li class="admin-parent">
+          <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 客房服务 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav">
+            <li><a href="/booking" class="am-cf"><span class="am-icon-check"></span> 预定酒店<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
+            <li><a href="/live"><span class="am-icon-puzzle-piece"></span> 办理入住</a></li>
+            <li><a href="/checkout"><span class="am-icon-th"></span> 办理退房</a></li>
+            <li><a href="/searchroom"><span class="am-icon-bug"></span> 房间信息</a></li>
+          </ul>
+        </li>
+        <li><a href="/search"><span class="am-icon-pencil-square-o"></span> 查询</a></li>
+        <li><a href="/count"><span class="am-icon-table"></span> 订单详情</a></li>
+      </ul>
+
+      <div class="am-panel am-panel-default admin-sidebar-panel">
+        <div class="am-panel-bd">
+          <p><span class="am-icon-bookmark"></span> 公告</p>
+          <p>祝各位老板身体健康！</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="admin-content">
+    <div class="admin-content-body">
+      <%= yield %>
+    </div>
+  </div>
+  
+  <script src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.min.js"></script>
+
+  </body>
+</html>

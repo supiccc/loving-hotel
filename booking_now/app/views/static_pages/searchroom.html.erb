@@ -1,0 +1,53 @@
+<div class="admin-content">
+<div class="admin-content-body">
+<div class="am-cf am-padding am-padding-bottom-0">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">房间详情</strong></div>
+</div>
+<hr>
+
+      <div class="am-g">
+        <div class="am-u-sm-12">
+          <form class="am-form">
+            <table class="am-table am-table-striped am-table-hover table-main">
+    <thead>
+        <tr>
+            <th>房间号</th>
+            <th>状态</th>            
+            <th>房型</th>
+            <th>价格</th>
+            <th>面积</th>
+            <th>床</th>
+            <th>吹风机</th>
+            <th>电话</th>
+            <th>电视</th>
+            <th>独立卫生间</th>                        
+            <th>浴缸</th>            
+        </tr>
+    </thead>
+    <tbody>
+        <% @roominfos.each do |t| %>
+        <tr>
+            <td><%= t.房间号 %></td>
+            <td><%= t.状态 %></td>
+            <td><%= t.房型 %></td>
+            <td><%= t.价格 %></td>
+            <td><%= t.面积 %></td>
+            <td><%= t.床 %></td>      
+            <td><%= t.吹风机 %></td>       
+            <td><%= t.电话 %></td>
+            <td><%= t.电视 %></td>
+            <td><%= t.独立卫生间 %></td>      
+            <td><%= t.浴缸 %></td>                          
+        </tr>
+        <% end %>
+    </tbody>
+          </table>
+
+
+</form>
+</div>
+</div>
+
+
+</div>
+</div>
