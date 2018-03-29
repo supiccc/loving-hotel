@@ -87,4 +87,17 @@ class StaticPagesController < ApplicationController
 
   def test
   end
+
+  def update
+    @room_option = params[:roomtype]
+    @newprice = params[:newprice]
+    if @room_option == "no"
+    else
+      if @newprice.to_i.to_s == @newprice
+        @pricesql = "update price_band set price = " + @newprice + " where idprice_band = " + @room_option + ";"
+        @room_r = ActiveRecord::Base.connection.execute @pricesql
+        redirect_to '\searchroom'
+      end
+    end
+  end
 end

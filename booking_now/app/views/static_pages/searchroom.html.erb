@@ -6,6 +6,29 @@
 <hr>
 
       <div class="am-g">
+
+        <%= form_tag("/update", method: "post") do %>
+        <div class="am-u-sm-12 am-u-md-3">
+          <div class="am-form-group">
+            <select name="roomtype" data-am-selected="{btnSize: 'sm'}">
+              <option value="no">请选择房型</option>
+              <option value="1">豪华套房</option>
+              <option value="5">行政套房</option>
+              <option value="9">行政房</option>
+            </select>
+          </div>    
+        </div>    
+        <div class="am-u-sm-12 am-u-md-4">                    
+          <div class="am-input-group am-input-group-sm">          
+            <input type="text" class="am-form-field" placeholder="请输入新的价格（RMB/天）" name="newprice">
+          <span class="am-input-group-btn">
+            <input type="submit" class="am-btn am-btn-default" value="确认修改">
+          </span>
+          </div>
+        </div>           
+        <% end %>
+
+
         <div class="am-u-sm-12">
           <form class="am-form">
             <table class="am-table am-table-striped am-table-hover table-main">
