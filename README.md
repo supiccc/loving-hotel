@@ -67,4 +67,4 @@
   [13]: http://on7ckkp6r.bkt.clouddn.com/image/png/lovehotel/Screen%20Shot%202018-03-30%20at%2012.17.54%20AM.png
   [14]: http://on7ckkp6r.bkt.clouddn.com/image/png/lovehotel/Screen%20Shot%202018-03-30%20at%2012.18.05%20AM.png
   [15]: http://on7ckkp6r.bkt.clouddn.com/image/png/lovehotel/Screen%20Shot%202018-03-30%20at%2012.18.15%20AM.png
-  [16]: http://weibo.com/ghosert
+  [16]: http://weibo.com/chenshupei
